@@ -1,5 +1,6 @@
 import requests
 
+
 EMPLOYERS = {
     'Яндекс': 1455,
     'Сбер': 3529,
@@ -12,7 +13,6 @@ EMPLOYERS = {
     'Wildberries': 23427,
     'Лаборатория Касперского': 1740
 }
-
 
 def get_vacancies(employer_id: int) -> list:
     url = f'https://api.hh.ru/vacancies'

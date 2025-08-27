@@ -27,6 +27,7 @@ def save_data_to_db():
             """, (emp_id, vac['name'], salary_from,
                   salary_to, currency, vac['alternate_url']))
 
+
     conn.commit()
     cur.close()
     conn.close()
