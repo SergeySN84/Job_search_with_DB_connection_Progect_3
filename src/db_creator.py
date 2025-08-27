@@ -1,6 +1,7 @@
 import psycopg2
 from src.config import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
 
+
 def create_database():
     conn = psycopg2.connect(user=DB_USER, password=DB_PASSWORD,
                             host=DB_HOST, port=DB_PORT)
@@ -10,6 +11,7 @@ def create_database():
     cur.execute(f"CREATE DATABASE {DB_NAME}")
     cur.close()
     conn.close()
+
 
 def create_tables():
     conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER,

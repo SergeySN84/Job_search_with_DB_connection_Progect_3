@@ -13,6 +13,7 @@ EMPLOYERS = {
     'Лаборатория Касперского': 1740
 }
 
+
 def get_vacancies(employer_id: int) -> list:
     url = f'https://api.hh.ru/vacancies'
     params = {

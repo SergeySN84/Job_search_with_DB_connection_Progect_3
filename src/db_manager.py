@@ -1,6 +1,7 @@
 import psycopg2
 from src.config import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
 
+
 class DBManager:
     def __init__(self):
         self.conn = psycopg2.connect(

@@ -102,6 +102,23 @@ files = [
 ]
 
 [[package]]
+name = "flake8"
+version = "7.3.0"
+description = "the modular source code checker: pep8 pyflakes and co"
+optional = false
+python-versions = ">=3.9"
+groups = ["lint"]
+files = [
+    {file = "flake8-7.3.0-py2.py3-none-any.whl", hash = "sha256:b9696257b9ce8beb888cdbe31cf885c90d31928fe202be0889a7cdafad32f01e"},
+    {file = "flake8-7.3.0.tar.gz", hash = "sha256:fe044858146b9fc69b551a4b490d69cf960fcb78ad1edcb84e7fbb1b4a8e3872"},
+]
+
+[package.dependencies]
+mccabe = ">=0.7.0,<0.8.0"
+pycodestyle = ">=2.14.0,<2.15.0"
+pyflakes = ">=3.4.0,<3.5.0"
+
+[[package]]
 name = "idna"
 version = "3.10"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -115,6 +132,18 @@ files = [
 
 [package.extras]
 all = ["flake8 (>=7.1.1)", "mypy (>=1.11.2)", "pytest (>=8.3.2)", "ruff (>=0.6.2)"]
+
+[[package]]
+name = "mccabe"
+version = "0.7.0"
+description = "McCabe checker, plugin for flake8"
+optional = false
+python-versions = ">=3.6"
+groups = ["lint"]
+files = [
+    {file = "mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
+    {file = "mccabe-0.7.0.tar.gz", hash = "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325"},
+]
 
 [[package]]
 name = "psycopg2"
@@ -134,6 +163,30 @@ files = [
     {file = "psycopg2-2.9.10-cp39-cp39-win32.whl", hash = "sha256:9d5b3b94b79a844a986d029eee38998232451119ad653aea42bb9220a8c5066b"},
     {file = "psycopg2-2.9.10-cp39-cp39-win_amd64.whl", hash = "sha256:88138c8dedcbfa96408023ea2b0c369eda40fe5d75002c0964c78f46f11fa442"},
     {file = "psycopg2-2.9.10.tar.gz", hash = "sha256:12ec0b40b0273f95296233e8750441339298e6a572f7039da5b260e3c8b60e11"},
+]
+
+[[package]]
+name = "pycodestyle"
+version = "2.14.0"
+description = "Python style guide checker"
+optional = false
+python-versions = ">=3.9"
+groups = ["lint"]
+files = [
+    {file = "pycodestyle-2.14.0-py2.py3-none-any.whl", hash = "sha256:dd6bf7cb4ee77f8e016f9c8e74a35ddd9f67e1d5fd4184d86c3b98e07099f42d"},
+    {file = "pycodestyle-2.14.0.tar.gz", hash = "sha256:c4b5b517d278089ff9d0abdec919cd97262a3367449ea1c8b49b91529167b783"},
+]
+
+[[package]]
+name = "pyflakes"
+version = "3.4.0"
+description = "passive checker of Python programs"
+optional = false
+python-versions = ">=3.9"
+groups = ["lint"]
+files = [
+    {file = "pyflakes-3.4.0-py2.py3-none-any.whl", hash = "sha256:f742a7dbd0d9cb9ea41e9a24a918996e8170c799fa528688d40dd582c8265f4f"},
+    {file = "pyflakes-3.4.0.tar.gz", hash = "sha256:b24f96fafb7d2ab0ec5075b7350b3d2d2218eab42003821c06344973d3ea2f58"},
 ]
 
 [[package]]
@@ -179,4 +232,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "cfd5821a7e140d03e4cc07ed34c0601356e16105e69050a3df3b6ed11db2f7d0"
+content-hash = "449a60b62b7410e45a74b6f58b25793aa9eff8c879c7b69be6897f2e50c91954"
