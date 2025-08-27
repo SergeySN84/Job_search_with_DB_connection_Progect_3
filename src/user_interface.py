@@ -1,5 +1,6 @@
 from src.db_manager import DBManager
 
+
 def user_menu():
     db = DBManager()
     while True:

@@ -37,7 +37,6 @@ def create_tables():
         )
     """)
 
-
     conn.commit()
     cur.close()
     conn.close()

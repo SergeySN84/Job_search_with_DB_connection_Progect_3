@@ -13,7 +13,6 @@ class DBManager:
         )
         self.cur = self.conn.cursor()
 
-
     def get_companies_and_vacancies_count(self):
         self.cur.execute("""
             SELECT e.name, COUNT(v.vacancy_id)
@@ -23,7 +22,6 @@ class DBManager:
         """)
         return self.cur.fetchall()
 
-
     def get_all_vacancies(self):
         self.cur.execute("""
             SELECT e.name, v.name, v.salary_from, v.salary_to, v.url
@@ -31,7 +29,6 @@ class DBManager:
             JOIN employers e ON v.employer_id = e.employer_id
         """)
         return self.cur.fetchall()
-
 
     def get_avg_salary(self):
         self.cur.execute("""
@@ -41,7 +38,6 @@ class DBManager:
         """)
         result = self.cur.fetchone()[0]
         return round(result, 2) if result else 0
-
 
     def get_vacancies_with_higher_salary(self):
         avg = self.get_avg_salary()
@@ -53,7 +49,6 @@ class DBManager:
         """, (avg,))
         return self.cur.fetchall()
 
-
     def get_vacancies_with_keyword(self, keyword: str):
         self.cur.execute("""
             SELECT e.name, v.name, v.salary_from, v.salary_to, v.url
@@ -62,7 +57,6 @@ class DBManager:
             WHERE LOWER(v.name) LIKE %s
         """, (f'%{keyword.lower()}%',))
         return self.cur.fetchall()
-
 
     def close(self):
         self.cur.close()
