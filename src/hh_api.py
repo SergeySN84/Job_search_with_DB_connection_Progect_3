@@ -16,6 +16,9 @@ EMPLOYERS = {
 
 
 def get_vacancies(employer_id: int) -> list:
+    """
+     Функция для получения списка о вакансия с API сайта hh.ru
+    """
     url = f'https://api.hh.ru/vacancies'
     params = {
         'employer_id': employer_id,

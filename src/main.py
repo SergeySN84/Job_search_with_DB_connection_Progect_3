@@ -4,6 +4,7 @@ from src.user_interface import user_menu
 
 
 def main():
+    """Основная функция для вызова основного функционала проекта"""
     print("Создание БД и таблиц...")
     create_database()
     create_tables()
