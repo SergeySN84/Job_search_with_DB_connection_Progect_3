@@ -3,6 +3,7 @@ from src.config import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
 
 
 def create_database():
+    """Функция для создания базы данных"""
     conn = psycopg2.connect(user=DB_USER, password=DB_PASSWORD,
                             host=DB_HOST, port=DB_PORT)
     conn.autocommit = True
@@ -14,6 +15,7 @@ def create_database():
 
 
 def create_tables():
+    """Функция для создания таблиц"""
     conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER,
                             password=DB_PASSWORD, host=DB_HOST, port=DB_PORT)
     cur = conn.cursor()

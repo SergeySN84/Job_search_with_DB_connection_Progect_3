@@ -4,6 +4,7 @@ from src.config import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
 
 
 def save_data_to_db():
+    """Функция для сохранения данных в базу данных"""
     conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER,
                             password=DB_PASSWORD, host=DB_HOST, port=DB_PORT)
     cur = conn.cursor()
